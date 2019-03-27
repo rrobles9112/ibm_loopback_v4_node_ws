@@ -1,0 +1,11 @@
+{
+  "name": "ibm_db",
+  "connector": "db2",
+  "dsn": "",
+  "host": "172.25.2.12",
+  "port": 50000,
+  "user": "db2inst1",
+  "password": "db2inst1",
+  "database": "SALUD",
+  "schema": "SALFAM2"
+}
