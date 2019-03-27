@@ -22,7 +22,7 @@ import {MunicipiosRepository} from '../repositories';
 export class MunicipiosController {
   constructor(
     @repository(MunicipiosRepository)
-    public municipiosRepository : MunicipiosRepository,
+    public municipiosRepository : MunicipiosRepository
   ) {}
 
   @post('/municipios', {

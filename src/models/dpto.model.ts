@@ -1,6 +1,6 @@
 import {Model, model, property} from '@loopback/repository';
 
-@model({settings: {"strict":false}})
+@model({settings: {"strict":false},name:'DPTO'})
 export class Dpto extends Model {
   @property({
     type: 'string',
@@ -17,6 +17,7 @@ export class Dpto extends Model {
   // Define well-known properties here
 
   // Indexer property to allow additional data
+  // @ts-ignore
   [prop: string]: any;
 
   constructor(data?: Partial<Dpto>) {

@@ -1,4 +1,4 @@
-import {Model, model, property, hasOne, embedsOne} from '@loopback/repository';
+import {Model, model, property, hasOne} from '@loopback/repository';
 import {Municipios} from './municipios.model';
 
 @model({settings: {strict: false}, name: 'SF_VISITAS'})
@@ -15,7 +15,9 @@ export class Visitas extends Model {
   FECDESPLAZA?: string;
 
   // @ts-ignore
-  @hasOne(()=> Municipios, {keyTo:'CODIGO'})
+  @property({
+    type: 'string',
+  })
   MUNICIPIO?: Municipios
 
   @property({
