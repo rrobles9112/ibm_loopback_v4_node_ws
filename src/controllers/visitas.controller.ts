@@ -25,7 +25,7 @@ export class VisitasController {
     public visitasRepository : VisitasRepository,
   ) {}
 
-  @post('/visitas', {
+  /*@post('/visitas', {
     responses: {
       '200': {
         description: 'Visitas model instance',
@@ -35,7 +35,7 @@ export class VisitasController {
   })
   async create(@requestBody() visitas: Visitas): Promise<Visitas> {
     return await this.visitasRepository.create(visitas);
-  }
+  }*/
 
   @get('/visitas/count', {
     responses: {

@@ -25,7 +25,7 @@ export class DptoController {
     public dptoRepository : DptoRepository,
   ) {}
 
-  @post('/dptos', {
+  /*@post('/dptos', {
     responses: {
       '200': {
         description: 'Dpto model instance',
@@ -35,7 +35,7 @@ export class DptoController {
   })
   async create(@requestBody() dpto: Dpto): Promise<Dpto> {
     return await this.dptoRepository.create(dpto);
-  }
+  }*/
 
   @get('/dptos/count', {
     responses: {

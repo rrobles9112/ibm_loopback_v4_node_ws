@@ -25,7 +25,7 @@ export class MunicipiosController {
     public municipiosRepository : MunicipiosRepository
   ) {}
 
-  @post('/municipios', {
+  /*@post('/municipios', {
     responses: {
       '200': {
         description: 'Municipios model instance',
@@ -35,7 +35,7 @@ export class MunicipiosController {
   })
   async create(@requestBody() municipios: Municipios): Promise<Municipios> {
     return await this.municipiosRepository.create(municipios);
-  }
+  }*/
 
   @get('/municipios/count', {
     responses: {
@@ -69,7 +69,7 @@ export class MunicipiosController {
     return await this.municipiosRepository.find(filter);
   }
 
-  @patch('/municipios', {
+ /* @patch('/municipios', {
     responses: {
       '200': {
         description: 'Municipios PATCH success count',
@@ -82,7 +82,7 @@ export class MunicipiosController {
     @param.query.object('where', getWhereSchemaFor(Municipios)) where?: Where,
   ): Promise<Count> {
     return await this.municipiosRepository.updateAll(municipios, where);
-  }
+  }*/
 
   @get('/municipios/{id}', {
     responses: {
@@ -96,7 +96,7 @@ export class MunicipiosController {
     return await this.municipiosRepository.findById(id);
   }
 
-  @patch('/municipios/{id}', {
+/*  @patch('/municipios/{id}', {
     responses: {
       '204': {
         description: 'Municipios PATCH success',
@@ -108,9 +108,9 @@ export class MunicipiosController {
     @requestBody() municipios: Municipios,
   ): Promise<void> {
     await this.municipiosRepository.updateById(id, municipios);
-  }
+  }*/
 
-  @put('/municipios/{id}', {
+  /*@put('/municipios/{id}', {
     responses: {
       '204': {
         description: 'Municipios PUT success',
@@ -122,9 +122,9 @@ export class MunicipiosController {
     @requestBody() municipios: Municipios,
   ): Promise<void> {
     await this.municipiosRepository.replaceById(id, municipios);
-  }
+  }*/
 
-  @del('/municipios/{id}', {
+  /*@del('/municipios/{id}', {
     responses: {
       '204': {
         description: 'Municipios DELETE success',
@@ -133,5 +133,6 @@ export class MunicipiosController {
   })
   async deleteById(@param.path.number('id') id: number): Promise<void> {
     await this.municipiosRepository.deleteById(id);
-  }
+  }*/
+
 }

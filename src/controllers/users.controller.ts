@@ -25,7 +25,7 @@ export class UsersController {
     public usersRepository : UsersRepository,
   ) {}
 
-  @post('/users', {
+ /* @post('/users', {
     responses: {
       '200': {
         description: 'Users model instance',
@@ -35,7 +35,7 @@ export class UsersController {
   })
   async create(@requestBody() users: Users): Promise<Users> {
     return await this.usersRepository.create(users);
-  }
+  }*/
 
   @get('/users/count', {
     responses: {
@@ -69,7 +69,7 @@ export class UsersController {
     return await this.usersRepository.find(filter);
   }
 
-  @patch('/users', {
+  /*@patch('/users', {
     responses: {
       '200': {
         description: 'Users PATCH success count',
@@ -82,7 +82,7 @@ export class UsersController {
     @param.query.object('where', getWhereSchemaFor(Users)) where?: Where,
   ): Promise<Count> {
     return await this.usersRepository.updateAll(users, where);
-  }
+  }*/
 
   @get('/users/{id}', {
     responses: {
@@ -96,7 +96,7 @@ export class UsersController {
     return await this.usersRepository.findById(id);
   }
 
-  @patch('/users/{id}', {
+ /* @patch('/users/{id}', {
     responses: {
       '204': {
         description: 'Users PATCH success',
@@ -108,9 +108,9 @@ export class UsersController {
     @requestBody() users: Users,
   ): Promise<void> {
     await this.usersRepository.updateById(id, users);
-  }
+  }*/
 
-  @put('/users/{id}', {
+  /*@put('/users/{id}', {
     responses: {
       '204': {
         description: 'Users PUT success',
@@ -122,9 +122,9 @@ export class UsersController {
     @requestBody() users: Users,
   ): Promise<void> {
     await this.usersRepository.replaceById(id, users);
-  }
+  }*/
 
-  @del('/users/{id}', {
+  /*@del('/users/{id}', {
     responses: {
       '204': {
         description: 'Users DELETE success',
@@ -133,5 +133,7 @@ export class UsersController {
   })
   async deleteById(@param.path.number('id') id: number): Promise<void> {
     await this.usersRepository.deleteById(id);
-  }
+  }*/
+
+
 }
