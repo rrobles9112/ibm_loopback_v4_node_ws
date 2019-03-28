@@ -13,8 +13,13 @@ import {MySequence} from './sequence';
 export class WsGeoApplication extends BootMixin(
   ServiceMixin(RepositoryMixin(RestApplication)),
 ) {
-  constructor(options: ApplicationConfig = {}) {
-    super(options);
+  constructor(options: ApplicationConfig = {
+  }) {
+    super({
+      rest:{
+        port:4000
+      }
+    });
 
     // Set up the custom sequence
     this.sequence(MySequence);
@@ -26,6 +31,7 @@ export class WsGeoApplication extends BootMixin(
     this.bind(RestExplorerBindings.CONFIG).to({
       path: '/explorer',
     });
+
     this.component(RestExplorerComponent);
 
     this.projectRoot = __dirname;

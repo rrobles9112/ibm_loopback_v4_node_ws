@@ -3,7 +3,9 @@ import { ApplicationConfig } from '@loopback/core';
 
 export { WsGeoApplication };
 
-export async function main(options: ApplicationConfig = {}) {
+export async function main(options: ApplicationConfig = {
+
+}) {
   const app = new WsGeoApplication(options);
   await app.boot();
   await app.start();
