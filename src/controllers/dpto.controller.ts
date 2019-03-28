@@ -69,7 +69,7 @@ export class DptoController {
     return await this.dptoRepository.find(filter);
   }
 
-  @patch('/dptos', {
+  /*@patch('/dptos', {
     responses: {
       '200': {
         description: 'Dpto PATCH success count',
@@ -82,7 +82,7 @@ export class DptoController {
     @param.query.object('where', getWhereSchemaFor(Dpto)) where?: Where,
   ): Promise<Count> {
     return await this.dptoRepository.updateAll(dpto, where);
-  }
+  }*/
 
   @get('/dptos/{id}', {
     responses: {
@@ -96,7 +96,7 @@ export class DptoController {
     return await this.dptoRepository.findById(id);
   }
 
-  @patch('/dptos/{id}', {
+  /*@patch('/dptos/{id}', {
     responses: {
       '204': {
         description: 'Dpto PATCH success',
@@ -108,9 +108,9 @@ export class DptoController {
     @requestBody() dpto: Dpto,
   ): Promise<void> {
     await this.dptoRepository.updateById(id, dpto);
-  }
+  }*/
 
-  @put('/dptos/{id}', {
+  /*@put('/dptos/{id}', {
     responses: {
       '204': {
         description: 'Dpto PUT success',
@@ -122,9 +122,9 @@ export class DptoController {
     @requestBody() dpto: Dpto,
   ): Promise<void> {
     await this.dptoRepository.replaceById(id, dpto);
-  }
+  }*/
 
-  @del('/dptos/{id}', {
+  /*@del('/dptos/{id}', {
     responses: {
       '204': {
         description: 'Dpto DELETE success',
@@ -133,5 +133,6 @@ export class DptoController {
   })
   async deleteById(@param.path.string('id') id: string): Promise<void> {
     await this.dptoRepository.deleteById(id);
-  }
+  }*/
+
 }
