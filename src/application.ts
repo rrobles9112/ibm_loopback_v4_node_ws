@@ -17,7 +17,7 @@ export class WsGeoApplication extends BootMixin(
   }) {
     super({
       rest:{
-        port:4000
+        port:3999
       }
     });
 
